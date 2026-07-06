@@ -1,4 +1,5 @@
-import { View, Text, TextInput, Pressable } from "react-native";
+import { Link } from "expo-router";
+import { Pressable, Text, TextInput, View } from "react-native";
 
 export default function SignIn() {
   return (
@@ -23,11 +24,13 @@ export default function SignIn() {
       </View>
 
       <View className="mt-8">
-        <Pressable className="h-12 items-center justify-center rounded-xl bg-black">
-          <Text className="text-base font-semibold text-white">
-            Sign In
-          </Text>
-        </Pressable>
+        <Link href="/(Tabs)/HomeScreen" className="h-12 items-center justify-center rounded-xl bg-black">
+          <Pressable className="h-12 items-center justify-center rounded-xl bg-black w-full">
+            <Text className="text-base font-semibold text-white">
+              Sign In
+            </Text>
+          </Pressable>
+        </Link>
 
         <Pressable className="mt-4 self-end">
           <Text className="text-sm font-medium text-gray-600">
@@ -35,6 +38,6 @@ export default function SignIn() {
           </Text>
         </Pressable>
       </View>
-    </View>
+    </View >
   );
 }
